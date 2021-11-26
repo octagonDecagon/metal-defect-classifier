@@ -4,19 +4,16 @@
         <title>MetalDefectDeclassifier</title>
     </head>
     <body>
-        <h1 class="text-center">Image Classifier</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="defect.html">Detector</a></li>
+                <li><a href="aboutus.html">Our Team</a></li>
+            </ul>
+        </nav>
 
-        <p>Please upload a .png file below</p>
-        <form class="p-3 text-center" action="/", method="post" enctype="multipart/form-data">
-            <input class="form-control" type="file" name="imagefile">
-            <input class="btn btn-primary" type="submit" value="Predict Image">
-        </form>
-
-    <!-- adding text only if we pass a prediction-->
-
-    {% if prediction %}
-        <p class="text-center">Image is a {{prediction}}</p>
-    {% endif %}
-
+        <h1 class="text-center">Home</h1>
+        
+       
     </body>
 </html>
