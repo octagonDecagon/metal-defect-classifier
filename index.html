@@ -40,21 +40,8 @@
         <a href="#about_us">About Us</a>
       </div>
     <body>
-        <h1 class="text-center">Image Classifier</h1>
-
-        <p>Please upload a .png file below</p>
-        <form class="p-3 text-center" action="/", method="post" enctype="multipart/form-data">
-            <input class="form-control" type="file" name="imagefile">
-            <input class="btn btn-primary" type="submit" value="Predict Image">
-        </form>
-
-    <!-- adding text only if we pass a prediction-->
-
-    {% if prediction %}
-        <p class="text-center">Image is a {{prediction}}</p>
-    {% endif %}
-
-    
+        <h1 class="text-center">Metal Defect Classifier</h1>
+        <p>A project built by Western AI.</p>
 
 
     </body>
