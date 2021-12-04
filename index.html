@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <title>MetalDefectDeclassifier</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-        <style>
-            /* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap" rel="stylesheet">
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #ca3636;
-  color: white;
-}
-        </style>
     </head>
-    <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#upload_image">Upload Image</a>
-        <a href="#about_us">About Us</a>
-      </div>
+
     <body>
-        <h1 class="text-center">Metal Defect Classifier</h1>
-        <p>A project built by Western AI.</p>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="defect.html">Detector</a>
+            <a href="aboutus.html">Our Team</a>
+            
+        </nav>
+        <div class="home-head">
+        <h1 >Welcome to Western AI</h1>
+        <p>We have created a machine learning model that identifies defects in metal hot rolled metal.
+        </p>
 
+        </div>
 
+        <div class="about">
+            <h2>Project Goals</h2><br>
+            <p><strong>Machine Learning Model: </strong><br><br>
+                Train a model that can identify metal defects with >95% accuracy. 
+                Training data will only contain microscoped images of rolled metal sheets.
+                Use tensorflow sequential model to label model
+                <br><br>
+                <strong>Deployment:</strong><br><br>
+                Deploy a website that can allow users to upload an image in the form of PNG or JPEG, JPG and tell the user whether input is an unaccepted file type.
+                present the output of the model in a clear way, describing each defect and its effects on the metal. 
+                It should have an aesthetically pleasant appearance. 
+                Should contain a list of all the members involved and their LinkedIn profile address
+                Show CUCAI paper <br><br>
+                <strong>Technologies: </strong><br><br>
+                The website will use Flask as its framework, HTML and Bootstrap for its appearance. Javascript will be used to add functionality to the buttons and its appearance. Tensorflow will be used to create the model and the training data will be sourced from Kaggle
+                </p>
+
+        </div>
+        
+       
     </body>
 </html>
