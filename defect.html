@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MetalDefectDeclassifier</title>
+        <title>DefectClassifier</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap" rel="stylesheet">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Detector</li>
-                <li>Our Team</li>
-            </ul>
+        <nav id="navbar">
+           
+            <a href="index.html">Home</a>
+            <a href="defect.html">Detector</a>
+            <a href="aboutus.html">Our Team</a>
+          
         </nav>
+        <h1>Image Classifier</h1>
 
-        <h1 class="text-center">Image Classifier</h1>
-
-        <p>Please upload a .png file below</p>
+        <div id='classifier'>       
+             
+                <p>Please upload a .png file below</p>
         <form class="p-3 text-center" action="/", method="post" enctype="multipart/form-data">
             <input class="form-control" type="file" name="imagefile">
             <input class="btn btn-primary" type="submit" value="Predict Image">
         </form>
+
+    </div>
+
 
     <!-- adding text only if we pass a prediction-->
 
@@ -26,6 +35,7 @@
         <p class="text-center">Image is a {{prediction}}</p>
     {% endif %}
 
+  
 
     </body>
 </html>
