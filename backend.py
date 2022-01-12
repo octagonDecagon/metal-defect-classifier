@@ -13,10 +13,13 @@ def home():
 def aboutus():
     return render_template("aboutus.html")
 
+@backend.route("/index.html", methods=["GET"])
+def backhome():
+   return render_template("index.html")
 
-@backend.route("/defect.html", methods=["GET"])
-def defect():
-   return render_template("defect.html")
+@backend.route("/defects.html", methods=["GET"])
+def defects():
+   return render_template("defects.html")
 
 @backend.route('/', methods=['POST'])
 def predict():
@@ -29,7 +32,7 @@ def predict():
 
     classification ='%s (%.2f%%)' % (label[1],label[2]*100)
 
-    return render_template('index.html', prediction=classification)
+    return render_template('defects.html', prediction=classification)
 
 
 #now running the app
