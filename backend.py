@@ -1,14 +1,18 @@
 from flask import Flask, render_template, request
 
 
-#render template allows us to pull in html file template 
+#render template allows us to pull in html file template
 
-backend = Flask(__name__) #create instance of flask web application 
+backend = Flask(__name__) #create instance of flask web application
 
 #making web pages and defining how to access the page
 @backend.route("/", methods=["GET"]) #defining path to get to the function
 def home():
-    return render_template("index.html") #referencing the html page 
+    return render_template("index.html") #referencing the html page
+
+@backend.route("/index.html", methods=["GET"]) #defining path to get to the function
+def index():
+    return render_template("index.html") #referencing the html page
 
 @backend.route("/aboutus.html", methods=["GET"])
 def aboutus():
@@ -19,7 +23,7 @@ def backhome():
    return render_template("index.html")
 
 @backend.route("/defects.html", methods=["GET"])
-def defects():
+def defect():
    return render_template("defects.html")
 
 @backend.route('/', methods=['POST'])
@@ -39,5 +43,3 @@ def predict():
 #now running the app
 if __name__ == "__main__":
     backend.run(port =3000, debug=True)
-
-
