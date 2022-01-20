@@ -168,3 +168,33 @@ padding-bottom: 5%;
   padding-left: 10%;
   padding-bottom: 5%;
 }
+
+#Footer{
+  padding-top: 0.5%;
+  background-color: rgb(255, 244, 215); 
+  padding-bottom: 3%;
+  }
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  height: 0px;
+  color: black;
+
+}
+
+#socials{
+  float: right;
+  font-size: 25px;
+  padding-right: 2%;
+}
+
+.fa {
+  text-decoration: none;
+}
+
+#copyright {
+  padding-top: 0%;
+  padding-left: 1%;
+}
