@@ -16,9 +16,9 @@ import sys
 import numpy as np
 
 #import model 
-global model
-model = tf.keras.models.load_model("resnet50_weights_tf_dim_ordering_tf_kernels.h5")
-print("* Model loaded!")
+#global model
+#model = tf.keras.models.load_model("resnet50_weights_tf_dim_ordering_tf_kernels.h5")
+#print("* Model loaded!")
 
 #render template allows us to pull in html file template
 

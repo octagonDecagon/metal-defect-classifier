@@ -14,12 +14,14 @@ def convert_image_to_array(files):
 
 #Retrieve the model
 model = keras.models.load_model("model90acc.h5")
-model.summary()
+##model.summary()
 
 #Retrieve the test Image
-image = Image.open("/static/Testimages/steelSheetmetal.png")
-testImg = np.array(convert_image_to_array(image))
-print('Test set shape : ',testImg.shape)
+image = Image.open("Sc_1.bmp")
+#arryBMP = np.array(image)
+
+image = np.array(convert_image_to_array(image))
+#print('Test set shape : ',testImg.shape)
 
 #Display the prediction
 prediction = model.predict(testImg)
